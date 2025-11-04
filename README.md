@@ -38,7 +38,7 @@ ollama serve
 nix run github:YOUR_USERNAME/ollama-cuda
 
 # Or install to profile
-nix profile install github:YOUR_USERNAME/ollama-cuda
+nix profile install github:barstoolbluz/ollama-cuda
 ollama serve
 
 # Reference in a Flox manifest
