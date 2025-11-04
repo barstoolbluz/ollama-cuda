@@ -35,7 +35,7 @@ ollama serve
 
 ```bash
 # Build and run directly from GitHub
-nix run github:YOUR_USERNAME/ollama-cuda
+nix run github:barstoolbluz/ollama-cuda
 
 # Or install to profile
 nix profile install github:barstoolbluz/ollama-cuda
