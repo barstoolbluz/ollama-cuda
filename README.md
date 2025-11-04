@@ -21,8 +21,11 @@ flox activate
 # Build ollama-cuda
 flox build ollama-cuda
 
+# Publish to your private Flox catalog
+flox publish ollama-cuda
+
 # Install
-flox install ollama-cuda
+flox install <floxhub_username>/ollama-cuda
 
 # Run
 ollama serve
@@ -37,6 +40,11 @@ nix run github:YOUR_USERNAME/ollama-cuda
 # Or install to profile
 nix profile install github:YOUR_USERNAME/ollama-cuda
 ollama serve
+
+# Reference in a Flox manifest
+[install]
+ollama-cuda.flake = "github:barstoolbluz/ollama-cuda"
+ollama-cuda.systems = ["x86_64-linux", "aarch64-linux"]
 ```
 
 See **[FLAKE_USAGE.md](FLAKE_USAGE.md)** for detailed flake documentation.
