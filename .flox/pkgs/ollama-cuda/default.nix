@@ -15,7 +15,17 @@
   rocmPackages,
   rocmGpuTargets ? rocmPackages.clr.localGpuTargets or (rocmPackages.clr.gpuTargets or [ ]),
   cudaPackages,
-  cudaArches ? cudaPackages.flags.realArches or [ ],
+  cudaArches ? [
+    "sm_52"   # Maxwell - GTX 9xx
+    "sm_61"   # Pascal - GTX 10xx
+    "sm_75"   # Turing - RTX 20xx
+    "sm_80"   # Ampere - RTX 30xx
+    "sm_86"   # Ampere mobile
+    "sm_89"   # Ada Lovelace - RTX 40xx
+    "sm_90"   # Hopper - H100
+    "sm_100"  # Blackwell datacenter
+    "sm_120"  # Blackwell consumer - RTX 5090
+  ],
   autoAddDriverRunpath,
   apple-sdk_15,
 
@@ -31,18 +41,6 @@
   config,
   # one of `[ null false "rocm" "cuda" ]`
   acceleration ? "cuda",
-  # GPU architectures to build for
-  cudaArches ? [
-    "sm_52"   # Maxwell - GTX 9xx
-    "sm_61"   # Pascal - GTX 10xx
-    "sm_75"   # Turing - RTX 20xx
-    "sm_80"   # Ampere - RTX 30xx
-    "sm_86"   # Ampere mobile
-    "sm_89"   # Ada Lovelace - RTX 40xx
-    "sm_90"   # Hopper - H100
-    "sm_100"  # Blackwell datacenter
-    "sm_120"  # Blackwell consumer - RTX 5090
-  ],
 }:
 
 assert builtins.elem acceleration [
