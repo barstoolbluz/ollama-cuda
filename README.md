@@ -78,8 +78,9 @@ When a new Ollama version is released:
 # Check upstream version
 nix-env -qa ollama-cuda
 
-# Update flox catalog (pulls latest nixpkgs)
-flox update
+# Update flox catalog (pulls latest nixpkgs);
+# Clone this repo and run:
+flox upgrade
 
 # Rebuild with new version
 flox build ollama-cuda
@@ -87,8 +88,8 @@ flox build ollama-cuda
 # Test
 result-ollama-cuda/bin/ollama --version
 
-# Install if good
-flox install ollama-cuda
+# Publish if desired
+flox publish ollama-cuda
 ```
 
 ### Option 2: Automated GitHub Actions
