@@ -1,0 +1,11 @@
+version = 1
+
+[install]
+ollama-cuda.pkg-path = "ollama-cuda"
+
+[vars]
+OLLAMA_HOST = "0.0.0.0"
+OLLAMA_PORT = "11434"
+
+[options]
+systems = ["aarch64-linux", "x86_64-linux"]
