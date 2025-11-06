@@ -2,6 +2,15 @@ version = 1
 
 [install]
 ollama-cuda.pkg-path = "flox-cuda/ollama"
+#cudatoolkit.pkg-path = "flox-cuda/cudaPackages_12_9.cudatoolkit"
+#cudart.pkg-path = "flox-cuda/cudaPackages_12_9.cuda_cudart"
+#cudart.priority = 7
+#nvcc.pkg-path = "flox-cuda/cudaPackages_12_9.cuda_nvcc"
+#nvcc.priority = 6
+#gcc.pkg-path = "gcc"
+#gcc-unwrapped.pkg-path = "gcc-unwrapped"
+#gcc-unwrapped.priority = 7
+#go.pkg-path = "go"
 
 [vars]
 OLLAMA_HOST = "0.0.0.0"
